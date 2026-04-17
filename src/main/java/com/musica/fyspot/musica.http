@@ -1,0 +1,7 @@
+GET localhost:8080/musica/buscar?id=3
+
+###
+DELETE localhost:8080/musica/apagar?id=3
+
+###
+POST http://localhost:8080/musica/criar
