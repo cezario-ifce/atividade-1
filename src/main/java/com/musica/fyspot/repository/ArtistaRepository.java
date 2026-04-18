@@ -2,11 +2,11 @@ package com.musica.fyspot.repository;
 
 import com.musica.fyspot.entity.ArtistaEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+
 
 public interface ArtistaRepository {
-    public interface ArtistaRepository extends
-            JpaRepository<ArtistaEntity, Integer>{
+    public interface ArtistRepository extends
+            JpaRepository<ArtistaEntity, Integer>  {
 
     }
 }

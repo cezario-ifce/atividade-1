@@ -1,11 +1,9 @@
 package com.musica.fyspot.services;
 
-import com.musica.fyspot.dto.MusicaDTO;
 import com.musica.fyspot.entity.ArtistaEntity;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.artistaEntity;
 import org.springframework.stereotype.Service;
 import com.musica.fyspot.repository.ArtistaRepository;
+import org.springframework.http.HttpStatus;
 
 @Service
 public class ArtistaService {
@@ -18,7 +16,7 @@ public class ArtistaService {
         return  artista;
     }
 
-    public artistaEntity<ArtistaEntity> criar(ArtistaEntity artista){
+    public ArtistaEntity < ArtistaEntity> criar(ArtistaEntity artista){
         MusicaEntity entity = musicaRepository.save(musica);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(entity);
@@ -68,7 +66,8 @@ public class ArtistaService {
 
     }
 
-    public MusicaService(MusicaRepository musicaRepository) {
+    public MusicaService(MusicaRepository musicaRepository, ArtistaRepository artistaRepository) {
+        this.artistaRepository = artistaRepository;
         this.musicaRepository = musicaRepository;
     }
 }
