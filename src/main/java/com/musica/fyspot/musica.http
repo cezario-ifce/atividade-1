@@ -5,3 +5,6 @@ DELETE localhost:8080/musica/apagar?id=3
 
 ###
 POST http://localhost:8080/musica/criar
+
+###
+PUT http://localhost:8080/editar/renomear
