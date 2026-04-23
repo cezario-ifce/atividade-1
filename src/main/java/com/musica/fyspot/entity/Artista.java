@@ -16,4 +16,5 @@ public class Artista {
     private String nome;
     private String nacionalidade;
     private Date dataNascimento;
+    private String genero;
 }
