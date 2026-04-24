@@ -5,16 +5,15 @@ import lombok.Data;
 
 import java.util.Date;
 
-
 @Entity
-@Table(name="musicas")
 @Data
-public class MusicaEntity {
+public class UsuarioEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
-    private String artista;
     private String genero;
-    private Date dataLancamento;
+    private String nacionalidade;
+    private Date dataNascimento;
 }
+

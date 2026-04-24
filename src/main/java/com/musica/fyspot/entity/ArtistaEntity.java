@@ -7,15 +7,15 @@ import lombok.Data;
 import java.util.Date;
 
 @Entity
-@Table(name="Artista")
+@Table(name="Artistas")
 @Data
 public class ArtistaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
     private String Nome;
-    private Date dataNacimento;
+    private Date dataNascimento;
     private String Genero;
-    private Integer idade;
+    private String nacionalidade;
 
 }
