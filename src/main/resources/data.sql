@@ -28,3 +28,6 @@ INSERT INTO Artistas (nome, nacionalidade, data_nascimento) VALUES
 ('Mariah Carey', 'Americana', '1969-03-27'),
 ('Freddie Mercury', 'Britânico', '1946-09-05'),
 ('Beyoncé', 'Americana', '1981-09-04');
+
+INSERT INTO Usuario (nome_usuario, senha, email) VALUES
+('Marcos Antonio', 'ma1212','marcos@gmailcom');
