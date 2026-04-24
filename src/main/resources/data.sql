@@ -28,3 +28,20 @@ INSERT INTO Artista (nome, nacionalidade, data_nascimento) VALUES
 ('Mariah Carey', 'Americana', '1969-03-27'),
 ('Freddie Mercury', 'Britânico', '1946-09-05'),
 ('Beyoncé', 'Americana', '1981-09-04');
+
+INSERT INTO usuario (nome_usuario, senha, email) VALUES
+('joao_silva', 'senha123', 'joao@email.com'),
+('maria_musica', 'musica2024', 'maria@email.com'),
+('carlos_rock', 'rocknroll', 'carlos@email.com'),
+('ana_fyspot', 'ana12345', 'ana@email.com'),
+('pedro_batida', 'pedro99', 'pedro@email.com'),
+('beatriz_vibe', 'vibe_check', 'beatriz@email.com'),
+('lucas_melodia', 'melodia77', 'lucas@email.com'),
+('juliana_som', 'som_festa', 'juliana@email.com'),
+('marcos_ritmo', 'ritmo_total', 'marcos@email.com'),
+('fernanda_pop', 'pop_star', 'fernanda@email.com'),
+('ricardo_jazz', 'jazz_blue', 'ricardo@email.com'),
+('patricia_mpb', 'brasil_som', 'patricia@email.com'),
+('andre_eletro', 'eletro_beat', 'andre@email.com'),
+('camila_indie', 'indie_vibes', 'camila@email.com'),
+('bruno_trap', 'trap_lord', 'bruno@email.com');
