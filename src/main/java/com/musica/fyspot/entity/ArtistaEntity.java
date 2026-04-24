@@ -2,14 +2,13 @@ package com.musica.fyspot.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import tools.jackson.databind.ser.jdk.StringSerializer;
 
 import java.util.Date;
 
 @Entity
 @Table (name= "Artista")
 @Data
-public class Artista {
+public class ArtistaEntity {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer Id;
