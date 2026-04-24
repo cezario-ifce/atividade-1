@@ -1,0 +1,22 @@
+package com.musica.fyspot.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+import java.util.Date;
+@Entity
+@Table (name= "artista")
+@Data
+
+public class ArtistaEntity {
+    @id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String nome;
+    private String nacionalidade;
+    private Date dataNascimento;
+    private String genero;
+}
