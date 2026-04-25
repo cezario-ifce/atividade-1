@@ -33,7 +33,7 @@ public class ArtistaController {
     @DeleteMapping("/apagar")
     public String apagarArtsita(@RequestParam(name = "id")
                                Integer id){
-        return ArtistaService.deletar(id);
+        return artistaService.deletar(id);
     }
 
     public ArtistaController(ArtistaService artistaService) {

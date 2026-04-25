@@ -56,7 +56,7 @@ public class ArtistaService {
         }
     }
 
-    public static String deletar(Integer id){
+    public String deletar(Integer id){
         String mensagem;
         try{
             artistaRepository.findById(id).orElseThrow(() ->
