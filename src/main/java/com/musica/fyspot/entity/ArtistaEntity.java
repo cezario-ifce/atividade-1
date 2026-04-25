@@ -10,7 +10,6 @@ public class ArtistaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     private String nome;
     private String generoMusical;
     private String biografia;
