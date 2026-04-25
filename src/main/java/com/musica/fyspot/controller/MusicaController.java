@@ -1,6 +1,5 @@
 package com.musica.fyspot.controller;
 
-import com.musica.fyspot.dto.MusicaDTO;
 import com.musica.fyspot.entity.MusicaEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
