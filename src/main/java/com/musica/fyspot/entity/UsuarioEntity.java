@@ -3,19 +3,17 @@ package com.musica.fyspot.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
-
 @Entity
-@Table(name="artista")
+@Table(name="usuario")
 @Data
 
-public class ArtistaEntity {
+public class UsuarioEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String  nome;
-    private String  Nacionalidade;
-    private Date datanacimento;
+    private String Nome;
+    private String Senha;
+    private String email;
 
 }

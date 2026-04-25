@@ -1,9 +1,14 @@
 package com.musica.fyspot.services;
 
 import com.musica.fyspot.entity.ArtistaEntity;
-import org.springframework.stereotype.Service;
+import com.musica.fyspot.entity.MusicaEntity;
 import com.musica.fyspot.repository.ArtistaRepository;
+import com.musica.fyspot.repository.MusicaRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
 
 @Service
 public class ArtistaService {
@@ -13,51 +18,52 @@ public class ArtistaService {
 
         ArtistaEntity artista = artistaRepository.
                 findById(id).orElse(null);
-        return  artista;
+
+        return artista;
     }
 
-    public ArtistaEntity < ArtistaEntity> criar(ArtistaEntity artista){
-        MusicaEntity entity = musicaRepository.save(musica);
+    public ResponseEntity<ArtistaEntity> criar(ArtistaEntity artista){
+        ArtistaEntity entity = artistaRepository.save(artista);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(entity);
     }
 
-    public ResponseEntity<?> editar(Integer id, MusicaEntity musicaAtualizada){
+    public ResponseEntity<?> editar(Integer id, ArtistaEntity artistaAtualizado){
         try{
-            MusicaEntity musica = musicaRepository.findById(id).orElseThrow(() ->
-                    new RuntimeException("Musica não encontrada"));
+            ArtistaEntity artista = artistaRepository.findById(id).orElseThrow(() ->
+                    new RuntimeException("Artista não encontrada"));
 
-            if (musicaAtualizada.getNome() != null){
-                musica.setNome(musicaAtualizada.getNome());
+            if (artistaAtualizado.getNome() != null){
+                artista.setNome(artistaAtualizado.getNome());
             }
 
-            if (musicaAtualizada.getArtista() != null){
-                musica.setArtista(musicaAtualizada.getArtista());
+            if (artistaAtualizado.getId() != null){
+                artista.setId(artistaAtualizado.getId());
             }
-            if (musicaAtualizada.getGenero() != null){
-                musica.setGenero(musicaAtualizada.getGenero());
+            if (artistaAtualizado.getNacionalidade() != null){
+                artista.setNacionalidade(artistaAtualizado.getNacionalidade());
             }
-            if (musicaAtualizada.getDataLancamento() != null){
-                musica.setDataLancamento(musicaAtualizada.getDataLancamento());
+            if (artistaAtualizado.getDatanacimento() != null){
+                artista.setDatanacimento(artistaAtualizado.getDatanacimento());
             }
 
-            musicaRepository.save(musica);
+            artistaRepository.save(artista);
 
-            return ResponseEntity.ok(musica);
+            return ResponseEntity.ok(artista);
 
         } catch (RuntimeException e){
             return ResponseEntity.status(HttpStatus.NO_CONTENT).body(e.getMessage());
         }
     }
 
-    public String deletar(Integer id){
+    public static String deletar(Integer id){
         String mensagem;
         try{
-            musicaRepository.findById(id).orElseThrow(() ->
-                    new RuntimeException("Musica não encontrada"));
+            artistaRepository.findById(id).orElseThrow(() ->
+                    new RuntimeException("Artista não encontrada"));
 
-            musicaRepository.deleteById(id);
-            mensagem = "Musica deletada";
+            artistaRepository.deleteById(id);
+            mensagem = "Artista deletada";
 
             return mensagem ;
         } catch (RuntimeException e){
@@ -66,8 +72,9 @@ public class ArtistaService {
 
     }
 
-    public MusicaService(MusicaRepository musicaRepository, ArtistaRepository artistaRepository) {
+    public ArtistaService(ArtistaRepository artistaRepository) {
         this.artistaRepository = artistaRepository;
-        this.musicaRepository = musicaRepository;
     }
+
+
 }
