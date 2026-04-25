@@ -1,9 +1,9 @@
 package com.musica.fyspot.controller;
 
 
-import com.musica.fyspot.entity.ArtistaEntity;
 import com.musica.fyspot.entity.UsuarioEntity;
 import com.musica.fyspot.services.ArtistaService;
+import com.musica.fyspot.services.UsuarioService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/artista")
+@RequestMapping ("/usuario")
 @RequiredArgsConstructor
-public class ArtistaController {
-    private final ArtistaService artistaService;
+public class UsuarioController {
+    private final UsuarioService usuarioService;
 
-    @GetMapping( "/buscar")
-    public List<ArtistaEntity>  buscarArtista  (){
-        return artistaService.buscar();
+
+    @GetMapping ("/buscar")
+    public UsuarioEntity buscarService (@RequestParam(name = "id") Integer id){
+        return  usuarioService.buscar(id);
 
     }
-
 
 }
