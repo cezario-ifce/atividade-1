@@ -1,4 +1,4 @@
-GET localhost:8080/musica/buscar?id=3
+GET localhost:8080/artista/buscar?id=3
 
 ###
 DELETE localhost:8080/musica/apagar?id=3

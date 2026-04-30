@@ -6,3 +6,42 @@ INSERT INTO musicas (nome, artista, genero, data_lancamento) VALUES
 ( 'Despacito', 'Luis Fonsi', 'Reggaeton', '2017-01-12'),
 ( 'Shape of You', 'Ed Sheeran', 'Pop', '2017-01-06'),
 ( 'Smells Like Teen Spirit', 'Nirvana', 'Grunge', '1991-09-10');
+
+INSERT INTO Artista (nome, nacionalidade, data_nascimento) VALUES
+('Fernanda Montenegro', 'Brasileira', '1929-10-16'),
+('Tom Jobim', 'Brasileiro', '1927-01-25'),
+('Carmen Miranda', 'Portuguesa-Brasileira', '1909-02-09'),
+('Rodrigo Santoro', 'Brasileiro', '1975-08-22'),
+('Sônia Braga', 'Brasileira', '1950-06-08'),
+('Wagner Moura', 'Brasileiro', '1976-06-27'),
+('Anitta', 'Brasileira', '1993-03-30'),
+('Chico Buarque', 'Brasileiro', '1944-06-19'),
+('Alice Braga', 'Brasileira', '1983-04-15'),
+('Caetano Veloso', 'Brasileiro', '1942-08-07'),
+('Vincent van Gogh', 'Holandês', '1853-03-30'),
+('Frida Kahlo', 'Mexicana', '1907-07-06'),
+('Pablo Picasso', 'Espanhol', '1881-10-25'),
+('Leonardo da Vinci', 'Italiano', '1452-04-15'),
+('Andy Warhol', 'Americano', '1928-08-06'),
+('Salvador Dalí', 'Espanhol', '1904-05-11'),
+('Claude Monet', 'Francês', '1840-11-14'),
+('Mariah Carey', 'Americana', '1969-03-27'),
+('Freddie Mercury', 'Britânico', '1946-09-05'),
+('Beyoncé', 'Americana', '1981-09-04');
+
+INSERT INTO usuario (nome_usuario, senha, email) VALUES
+('joao_silva', 'senha123', 'joao@email.com'),
+('maria_musica', 'musica2024', 'maria@email.com'),
+('carlos_rock', 'rocknroll', 'carlos@email.com'),
+('ana_fyspot', 'ana12345', 'ana@email.com'),
+('pedro_batida', 'pedro99', 'pedro@email.com'),
+('beatriz_vibe', 'vibe_check', 'beatriz@email.com'),
+('lucas_melodia', 'melodia77', 'lucas@email.com'),
+('juliana_som', 'som_festa', 'juliana@email.com'),
+('marcos_ritmo', 'ritmo_total', 'marcos@email.com'),
+('fernanda_pop', 'pop_star', 'fernanda@email.com'),
+('ricardo_jazz', 'jazz_blue', 'ricardo@email.com'),
+('patricia_mpb', 'brasil_som', 'patricia@email.com'),
+('andre_eletro', 'eletro_beat', 'andre@email.com'),
+('camila_indie', 'indie_vibes', 'camila@email.com'),
+('bruno_trap', 'trap_lord', 'bruno@email.com');
