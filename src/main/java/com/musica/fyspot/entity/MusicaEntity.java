@@ -13,6 +13,8 @@ public class MusicaEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
+    @ManyToOne
+    @JoinColumn(name = "id")
     private String artista;
     private String genero;
     private Date dataLancamento;

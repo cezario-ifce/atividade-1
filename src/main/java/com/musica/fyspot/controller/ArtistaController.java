@@ -1,13 +1,10 @@
 package com.musica.fyspot.controller;
 
 import com.musica.fyspot.entity.ArtistaEntity;
-import com.musica.fyspot.entity.MusicaEntity;
 import com.musica.fyspot.services.ArtistaService;
-import com.musica.fyspot.services.MusicaService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,11 +17,18 @@ public class ArtistaController {
         this.artistaService = artistaService;
     }
 
-
     @GetMapping("/buscar")
     public List<ArtistaEntity> buscarArtista() {
         return artistaService.buscar();
     }
 
-
+    @PostMapping("/criar")
+    public ResponseEntity<?> criar(@RequestBody ArtistaEntity artista) {
+        try {
+            ArtistaEntity novoArtista = artistaService.criar(artista);
+            return ResponseEntity.status(HttpStatus.CREATED).body(novoArtista);
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
 }

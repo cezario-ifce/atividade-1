@@ -18,4 +18,11 @@ public class ArtistaService {
     public List<ArtistaEntity>  buscar() {
         return artistaRepository.findAll();
     }
+
+    public ArtistaEntity criar(ArtistaEntity artista) {
+        if (artistaRepository.existsByNome(artista.getNome())) {
+            throw new RuntimeException("Já existe um artista cadastrado com este nome!");
+        }
+        return artistaRepository.save(artista);
+    }
 }
